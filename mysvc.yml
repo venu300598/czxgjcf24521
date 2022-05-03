@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mytomcat-svc
+  name: myjavaapp-svc
   labels:
-    app: mytomcat    
+    app: myjavaapp    
 spec:
   type: NodePort
   ports: 
@@ -11,6 +11,6 @@ spec:
     nodePort: 30001
     protocol: TCP
   selector:
-    app: mytomcat 
+    app: myjavaapp 
     
 
