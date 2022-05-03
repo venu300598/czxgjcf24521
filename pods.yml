@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: mynginx-rc
+  name: mytomcat-rc
 spec:
   replicas: 3 
   selector:
-    app: mynginx
+    app: mytomcat
   template:
     metadata:
       labels:
-        app: mynginx
+        app: mytomcat
     spec:
       containers:
-        - name: mynginx
-          image: nginx
+        - name: mytomcat-container
+          image: tomcat:8.5.78
           ports:
-            - containerPort: 80
+            - containerPort: 8080
 
 
