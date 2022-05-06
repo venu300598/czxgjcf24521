@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mjavaapp-deploy
+  name: m1javaapp-deploy
 spec:
   replicas: 3
   selector:
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myjavaapp-container
-        image: venudoc98/myjavaapp06may22:2
+        image: venudoc98/myjavaapp06may22:3
         ports:
         - containerPort: 8080
